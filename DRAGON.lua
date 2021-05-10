@@ -2616,13 +2616,32 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then 
 local Text = [[ 
-━━━━𝗟𝗜𝗡𝗘━━━━
+𖤓︙━━━ 𝗟𝗜𝗡𝗘 ━━━︙𖤓
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'مطور السورس', url="t.me/D_V_B_a_h_e_r"},{text = 'مـبـرمـج الـسـورس', url="t.me/D_V_A7_Me_d"}},
+{{text = 'مطور السورس', url="t.me/D_V_B_a_h_e_r"}},
+{{text = 'مـبـرمـج الـسـورس', url="t.me/D_V_A7_Me_d"}},
 {{text = 'قناه السورس', url="t.me/So0u_rce_Line"}}, 
 } 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'مطور سورس' or text == 'مطور السورس' then 
+local Text = [[ 
+بيبو مطور سورس لاين
+]] 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = 'مطور السورس', url="t.me/D_V_B_a_h_e_r"}},} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'مبرمج سورس' or text == 'مبرمج السورس' then 
+local Text = [[ 
+احمد مبرمج سورس لاين
+]] 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = 'مبرمج السورس', url="t.me/D_V_A7_Me_d"}},} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
@@ -8338,7 +8357,7 @@ local text =
 ' }\n'..' 𖤓︙  الايدي » { '..idgp..
 ' }\n'..' 𖤓︙  الايدي بالصوره » { '..idph..
 ' }\n'..' 𖤓︙  الرفع » { '..setadd..
-' }\n'..' 𖤓︙  الحظر » { '..banm..' }\n\n≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫\n 𖤓︙ قناة سورس لاين ↓\n [🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line) \n'
+' }\n'..' 𖤓︙  الحظر » { '..banm..' }\n\n≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫\n 𖤓︙ قناة سورس لاين ↓\n [𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11597,10 +11616,6 @@ return false
 end
 ---------------------- الاوامر الجديدة
 if text == 'الاوامر' then
-if not Mod(msg) then
-send(msg.chat_id_, msg.id_,' 𖤓︙ ')
-return false
-end
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -11923,7 +11938,7 @@ local Teext =[[
 𖤓︙ الجهات
 𖤓︙ الاشعارات
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11991,7 +12006,7 @@ local Teext =[[
 𖤓︙ اوامر التسليه
 𖤓︙ صورتي 
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12042,7 +12057,7 @@ local Teext =[[
 𖤓︙ وصف
 𖤓︙ تكرار + عدد
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12102,7 +12117,7 @@ local Teext =[[
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
 𖤓︙ الاوامر المضافه ( لعرض الاوامر المضافه ) 
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12167,7 +12182,7 @@ local Teext =[[
 𖤓︙ تغير امر الاوامر
 𖤓︙ تغير امر م1 ~ الئ م10
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12251,7 +12266,7 @@ local Teext =[[
 𖤓︙ الساعه
 𖤓︙ التاريخ
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12331,7 +12346,7 @@ local Teext =[[
 𖤓︙ تاك للمتزوجين
 𖤓︙ مسح المتزوجين
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12375,7 +12390,7 @@ local Teext =[[
 𖤓︙ اسم ~ ايدي + بوت غادر 
 𖤓︙ اذاعه 
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -12466,7 +12481,7 @@ local Teext =[[
 𖤓︙ مسح المشتركين
 𖤓︙ مسح الجروبات
 ≪━━━━━━𝗟𝗜𝗡𝗘━━━━━━≫
-[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/So0u_rce_Line)
+[𝗟𝗜𝗡𝗘](t.me/So0u_rce_Line)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
