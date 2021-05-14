@@ -8351,7 +8351,7 @@ local text =
 '\nء≪━━━━━━𝐑𝐀𝐌𝐁𝐎━━━━━━≫'..
 '\n'..' 𖤓︙  امر صيح » { '..kickme..
 ' }\n'..' 𖤓︙  امر اطردني » { '..sehuser..
-' }\n'..' 𖤓︙  امر منو ضافني » { '..addme..
+' }\n'..' 𖤓︙  امر ضافني » { '..addme..
 ' }\n'..' 𖤓︙  ردود المدير » { '..rdmder..
 ' }\n'..' 𖤓︙  ردود المطور » { '..rdsudo..
 ' }\n'..' 𖤓︙  الايدي » { '..idgp..
@@ -10832,7 +10832,7 @@ end
 return false
 end
 
-if text == 'منو ضافني' then
+if string.find(text,"ضافني") or string.find(text,"ضفني") then
 if not database:get(bot_id..'Added:Me'..msg.chat_id_) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da and da.status_.ID == "ChatMemberStatusCreator" then
@@ -10851,25 +10851,25 @@ send(msg.chat_id_, msg.id_,' 𖤓︙ انت دخلت عبر الرابط لتل�
 end
 end,nil)
 else
-send(msg.chat_id_, msg.id_,' 𖤓︙ تم تعطيل امر منو ضافني') 
+send(msg.chat_id_, msg.id_,' 𖤓︙ تم تعطيل امر ضافني') 
 end
 end
 
 if text == 'تفعيل ضافني' and Manager(msg) then   
 if database:get(bot_id..'Added:Me'..msg.chat_id_) then
-Text = ' 𖤓︙ تم تفعيل امر منو ضافني'
+Text = ' 𖤓︙ تم تفعيل امر ضافني'
 database:del(bot_id..'Added:Me'..msg.chat_id_)  
 else
-Text = ' 𖤓︙ بالتاكيد تم تفعيل امر منو ضافني'
+Text = ' 𖤓︙ بالتاكيد تم تفعيل امر ضافني'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == 'تعطيل ضافني' and Manager(msg) then  
 if not database:get(bot_id..'Added:Me'..msg.chat_id_) then
 database:set(bot_id..'Added:Me'..msg.chat_id_,true)  
-Text = '\n 𖤓︙ تم تعطيل امر منو ضافني'
+Text = '\n 𖤓︙ تم تعطيل امر ضافني'
 else
-Text = '\n 𖤓︙ بالتاكيد تم تعطيل امر منو ضافني'
+Text = '\n 𖤓︙ بالتاكيد تم تعطيل امر ضافني'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
